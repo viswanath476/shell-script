@@ -9,4 +9,4 @@ then
     echo "error::please run this script as rooot user"
 fi
 
-yum install mysql -i
+yum install -y
