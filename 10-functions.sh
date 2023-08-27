@@ -8,10 +8,10 @@ validate(){
 #$1-->it will receive the arugement
 if [ $USERID -ne 0 ]
 then
-    echo "installtion ---Failure"
+    echo "$2 ---Failure"
     exit 1
 else
-    echo "instaltion ..success"    
+    echo "$2 ..success"    
 fi
 }
 
