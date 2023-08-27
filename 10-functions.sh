@@ -6,16 +6,19 @@ DATE=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+R="\e[31m"
+G="\e[32m"
+
 USERID=$(id -u)
 # this functtion should validate the previous command and inform user it is success or failure
 validate(){
 #$1-->it will receive the arugement
 if [ $USERID -ne 0 ]
 then
-    echo "$2 ---Failure"
+    echo "$2 ---$R Failure"
     exit 1
 else
-    echo "$2 ..success"    
+    echo "$2 ..$G success"    
 fi
 }
 
