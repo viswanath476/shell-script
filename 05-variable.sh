@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "please enter first number"
-READ FIRSTNUMBER
+read FIRSTNUMBER
 echo "please enter second number"
-READ SECONDNUMBER
+read SECONDNUMBER
 
 MULTIPLE=$((FIRSTNUMBER*SECONDNUMBER))
