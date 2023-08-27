@@ -10,4 +10,4 @@ RESULT=$((NUMBER1+NUMBER2))
 
 #need to add text and above result
 
-THE RESULT IS $RESULT
+echo "THE RESULT IS $RESULT"
