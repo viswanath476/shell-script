@@ -15,10 +15,10 @@ validate(){
 #$1-->it will receive the arugement
 if [ $USERID -ne 0 ]
 then
-    echo "$2 ---$R Failure"
+    echo -e "$2 ---$R Failure"
     exit 1
 else
-    echo "$2 ..$G success"    
+    echo -e  "$2 ..$G success"    
 fi
 }
 
