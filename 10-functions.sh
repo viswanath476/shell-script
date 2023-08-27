@@ -2,6 +2,10 @@
 
 #out program goal is install mysql
 
+DATE=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
 USERID=$(id -u)
 # this functtion should validate the previous command and inform user it is success or failure
 validate(){
@@ -21,10 +25,10 @@ then
     exit 1
 fi
 #it is our resposisibily again to check installtion is success or not
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
-validate $? "installing my sl"
+validate $? "installing my sql"
 
-yum install  postfix -y
+yum install  postfix -y &>>$LOGFILE
 
 validate $? "installing postfix"
