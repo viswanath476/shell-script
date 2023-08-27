@@ -4,9 +4,9 @@
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
     echo "error::please run this script as rooot user"
 fi
 
-yum install -y
+yum install git -y
