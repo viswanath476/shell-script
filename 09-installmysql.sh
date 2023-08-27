@@ -10,7 +10,7 @@ then
     exit 1
 fi
 
-yum install mysql -y
+yum install mysqlll -y
 
 #it is our resposisibily again to check installtion is success or not
 if [ $? -ne 0 ]
