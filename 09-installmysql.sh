@@ -10,7 +10,7 @@ then
     exit 1
 fi
 
-yum install mysqlll -y
+yum install mysql   -y
 
 #it is our resposisibily again to check installtion is success or not
 if [ $? -ne 0 ]
@@ -19,4 +19,14 @@ then
     exit 1
 else
     echo "installtion of mysql is suuccess"
+fi    
+
+yum install postfix -y
+
+if [ $? -ne 0 ]
+then
+    echo "instead of postfix is error"
+    exit 1
+else
+    echo "installtion of postfix is suuccess"
 fi    
