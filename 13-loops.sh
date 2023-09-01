@@ -1,7 +1,6 @@
 #!/bin/bash
 
 DATE=$(date +%F)
-LOGSDIR=/home/centos/shellscript-logs
 # /home/centos/shellscript-logs/script-name-date.log
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
@@ -30,11 +29,11 @@ VALIDATE(){
 # all args are in $@
 for i in $@
 do
-    yum list installed $i &>>$LOGFILE
+    yum list installed $i 
     if [ $? -ne 0 ]
     then
         echo "$i is not installed, let's install it"
-        yum install $i -y &>>$LOGFILE
+        yum install $i -y 
         VALIDATE $? "$i"
     else
         echo -e "$Y $i is already installed $N"
